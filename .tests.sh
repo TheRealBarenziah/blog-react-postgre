@@ -7,4 +7,5 @@ yarn
 yarn lint
 cd ../backend
 yarn
-yarn test:check-coverage
+yarn lint
+yarn test

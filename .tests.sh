@@ -8,4 +8,3 @@ yarn lint
 cd ../backend
 yarn
 yarn lint
-yarn test

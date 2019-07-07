@@ -9,9 +9,9 @@ cache:
 git:
   depth: 3
 script:
-  - ./backend/ yarn test:check-coverage
+  - ./backend yarn test:check-coverage
 after_script:
-  - ./backend/ yarn report-coverage
+  - ./backend yarn report-coverage
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.5.1
   - export PATH=$HOME/.yarn/bin:$PATH

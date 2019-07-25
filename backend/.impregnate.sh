@@ -26,11 +26,16 @@ sequelize db:drop
 sequelize db:create
 sequelize db:migrate
 
-node ./seeders/01_pictures.js
-node ./seeders/02_commentaries.js
+node ./seeders/00_grades.js
+node ./seeders/01_avatars.js
+node ./seeders/02_admin_user.js
 node ./seeders/03_users.js
-node ./seeders/04_shows.js
-node ./seeders/05_prices.js
+node ./seeders/04_blog_posts.js
+node ./seeders/05_threads.js
+node ./seeders/06_original_posts.js
+node ./seeders/07_comments.js
+node ./seeders/08_private_messages.js
+node ./seeders/09_pictures.js
 
 echo ' '
 echo ' '

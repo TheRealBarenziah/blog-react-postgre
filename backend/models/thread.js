@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     isUserOnly: DataTypes.BOOLEAN
   }, {});
   Thread.associate = function(models) {
-    Thread.hasMany(models.User, { as: 'moderator'});
+    Thread.hasMany(models.User, { as: 'moderators'});
     Thread.hasMany(models.OriginalPost, {as: 'originalPosts'});
   };
   return Thread;

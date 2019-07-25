@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nodemon ./bin/www",
     "lint": "./node_modules/.bin/eslint --color . --ext .js,.jsx",
-    "lint:fix": "./node_modules/.bin/eslint --fix . --ext .js,.jsx"
+    "lint:fix": "./node_modules/.bin/eslint --fix . --ext .js,.jsx",
+    "impregnate": "chmod +x ./.impregnate.sh && ./.impregnate.sh"
   },
   "dependencies": {
     "bcrypt": "^3.0.6",

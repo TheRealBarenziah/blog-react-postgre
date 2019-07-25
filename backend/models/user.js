@@ -1,0 +1,25 @@
+'use strict';
+module.exports = (sequelize, DataTypes) => {
+  const User = sequelize.define('User', {
+    firstName: DataTypes.STRING,
+    lastName: DataTypes.STRING,
+    birthdate: DataTypes.DATE,
+    username: DataTypes.STRING,
+    email: DataTypes.STRING,
+    password: DataTypes.STRING,
+    isAdmin: DataTypes.BOOLEAN,
+    isCaterpillar: DataTypes.BOOLEAN,
+    isModerator: DataTypes.BOOLEAN,
+    grade: DataTypes.STRING,
+    flair: DataTypes.STRING,
+    signature: DataTypes.STRING
+  }, {});
+  User.associate = function(models) {
+    User.hasOne(models.Avatar, {as: 'avatar'});
+    User.hasMany(models.BlogPost, {as: 'blogPosts'});
+    User.hasMany(models.PrivateMessage, {as: 'privateMessages'});
+    User.hasMany(models.OriginalPost, {as: 'originalPosts'});
+    User.hasMany(models.Comment, {as: 'comments'});
+  };
+  return User;
+};

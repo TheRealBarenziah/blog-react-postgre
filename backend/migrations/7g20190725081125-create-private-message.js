@@ -21,16 +21,16 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'User',
-          key: 'id'
+          model: 'Users',
+          foreignKey: 'id'
         }
       },
       recipientId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'User',
-          key: 'id'
+          model: 'Users',
+          foreignKey: 'id'
         }
       },
       createdAt: {

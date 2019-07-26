@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     url: DataTypes.STRING
   }, {});
   Avatar.associate = function(models) {
-    Avatar.belongsTo(models.User);
+    Avatar.belongsTo(models.User, {as: 'avatar', foreignKey: 'avatarId'});
   };
   return Avatar;
 };

@@ -12,8 +12,8 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'Thread',
-          key: 'id'
+          model: 'Threads',
+          foreignKey: 'id'
         }
       },
       title: {

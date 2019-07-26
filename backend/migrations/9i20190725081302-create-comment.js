@@ -12,8 +12,8 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'OriginalPost',
-          key: 'id'
+          model: 'OriginalPosts',
+          foreignKey: 'id'
         }
       },
       content: {

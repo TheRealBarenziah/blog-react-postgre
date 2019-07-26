@@ -39,16 +39,16 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'Grade',
-          key: 'id'
+          model: 'Grades',
+          foreignKey: 'id'
         }
       },
       avatarId: {
         type: Sequelize.INTEGER,
         allowNull: true,
         references: {
-          model: 'Avatar',
-          key: 'id'
+          model: 'Avatars',
+          foreignKey: 'id'
         }
       },
       flair: {

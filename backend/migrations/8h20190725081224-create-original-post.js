@@ -23,7 +23,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       content: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       isAuthorModerator: {
         type: Sequelize.BOOLEAN

@@ -7,8 +7,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Comment.associate = function(models) {
     Comment.belongsTo(models.User, { foreignKey: 'authorId', as: 'author' });
-    Comment.belongsTo(models.Picture, { as: 'pictures' });
     Comment.belongsTo(models.Thread, {as: 'thread', foreignKey: 'threadId'});
+    Comment.hasMany(models.Picture, { as: 'pictures' });
   };
   return Comment;
 };

@@ -1,3 +1,7 @@
+const models = require('../models');
+const User = models.User;
+const faker = require('faker');
+
 User.create({
   firstName: 'Daenerys',
   lastName: 'Targaryen',

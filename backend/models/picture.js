@@ -5,9 +5,9 @@ module.exports = (sequelize, DataTypes) => {
     belongsTo: DataTypes.STRING
   }, {});
   Picture.associate = function(models) {
-    Picture.belongsTo(models.OriginalPost, { as: 'pictures', foreignKey: 'originalPostId'});
-    Picture.belongsTo(models.Commentary, { as: 'pictures', foreignKey: 'commentaryId'});
-    Picture.belongsTo(models.BlogPost, { as: 'pictures', foreignKey: 'blogPostId'});
+    // Picture.belongsTo(models.OriginalPost, { as: 'originalPost', foreignKey: 'originalPostId'});
+    // Picture.belongsTo(models.Commentary, { as: 'commentary', foreignKey: 'commentaryId'});
+    // Picture.belongsTo(models.BlogPost, { as: 'blogPost', foreignKey: 'blogPostId'});
   };
   return Picture;
 };

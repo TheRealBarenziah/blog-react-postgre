@@ -8,8 +8,8 @@ module.exports = (sequelize, DataTypes) => {
     category: DataTypes.STRING
   }, {});
   BlogPost.associate = function(models) {
-    BlogPost.belongsTo(models.User, { as: 'author' });
-    BlogPost.belongsToMany(models.Picture, { as: 'pictures', through: 'BlogPostPictures'});
+    BlogPost.belongsTo(models.User, { foreignKey: 'authorId', as: 'author' });
+    BlogPost.belongsTo(models.Picture, { as: 'pictures' });
   };
   return BlogPost;
 };

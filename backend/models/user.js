@@ -15,11 +15,11 @@ module.exports = (sequelize, DataTypes) => {
     signature: DataTypes.STRING
   }, {});
   User.associate = function(models) {
-    User.hasOne(models.Avatar, {as: 'avatar'});
-    User.hasMany(models.BlogPost, {as: 'blogPosts'});
-    User.hasMany(models.PrivateMessage, {as: 'privateMessages'});
-    User.hasMany(models.OriginalPost, {as: 'originalPosts'});
-    User.hasMany(models.Comment, {as: 'comments'});
+    User.hasOne(models.Avatar, {as: 'avatar' });
+    User.hasMany(models.OriginalPost, {as: 'originalPosts' });
+    User.hasMany(models.PrivateMessage, {as: 'privateMessages' });
+    User.hasMany(models.BlogPost, {as: 'blogPosts' });
+    User.hasMany(models.Comment, {as: 'comments' });
   };
   return User;
 };

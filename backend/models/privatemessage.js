@@ -6,8 +6,8 @@ module.exports = (sequelize, DataTypes) => {
     isRead: DataTypes.BOOLEAN
   }, {});
   PrivateMessage.associate = function(models) {
-    PrivateMessage.belongsTo(models.User, { foreignKey: 'authorId'});
-    PrivateMessage.belongsTo(models.User, { foreignKey: 'recipientId'});
+    PrivateMessage.belongsTo(models.User, { as: 'users', foreignKey: 'authorId'});
+    PrivateMessage.belongsTo(models.User, { as: 'users', foreignKey: 'recipientId'});
   };
   return PrivateMessage;
 };

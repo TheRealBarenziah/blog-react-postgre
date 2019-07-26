@@ -8,10 +8,10 @@ module.exports = (sequelize, DataTypes) => {
     hasBeenEdited: DataTypes.BOOLEAN
   }, {});
   OriginalPost.associate = function(models) {
-    OriginalPost.belongsTo(models.User, { as: 'author' });
-    OriginalPost.belongsTo(models.Thread, { as: 'thread' });
+    OriginalPost.belongsTo(models.User, { as: 'author', foreignKey: 'authorId'});
+    OriginalPost.belongsTo(models.Thread, { as: 'thread', foreignKey: 'threadId' });
     OriginalPost.hasMany(models.Comment, { as: 'comments' });
-    OriginalPost.belongsToMany(models.Picture, { as: 'pictures', through: 'OriginalPostPictures'});
+    OriginalPost.hasMany(models.Picture, { as: 'pictures' });
   };
   return OriginalPost;
 };

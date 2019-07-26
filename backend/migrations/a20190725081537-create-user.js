@@ -35,8 +35,21 @@ module.exports = {
       isModerator: {
         type: Sequelize.BOOLEAN
       },
-      grade: {
-        type: Sequelize.STRING
+      gradeId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'Grade',
+          key: 'id'
+        }
+      },
+      avatarId: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+        references: {
+          model: 'Avatar',
+          key: 'id'
+        }
       },
       flair: {
         type: Sequelize.STRING

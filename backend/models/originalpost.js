@@ -4,6 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     title: DataTypes.STRING,
     subtitle: DataTypes.STRING,
     content: DataTypes.STRING,
+    threadId: DataTypes.INTEGER,
     isAuthorModerator: DataTypes.BOOLEAN,
     hasBeenEdited: DataTypes.BOOLEAN
   }, {});

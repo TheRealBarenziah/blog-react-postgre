@@ -8,6 +8,14 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      threadId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'Thread',
+          key: 'id'
+        }
+      },
       title: {
         type: Sequelize.STRING
       },

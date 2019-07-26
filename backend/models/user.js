@@ -10,7 +10,8 @@ module.exports = (sequelize, DataTypes) => {
     isAdmin: DataTypes.BOOLEAN,
     isCaterpillar: DataTypes.BOOLEAN,
     isModerator: DataTypes.BOOLEAN,
-    grade: DataTypes.STRING,
+    gradeId: DataTypes.INTEGER,
+    avatarId: DataTypes.INTEGER,
     flair: DataTypes.STRING,
     signature: DataTypes.STRING
   }, {});

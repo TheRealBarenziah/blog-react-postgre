@@ -1,6 +1,7 @@
 const models = require('../models');
 const axios = require('axios');
 const Picture = models.Picture;
+const faker = require('faker');
 const apiKey = '80a74941-dcba-4cfd-91e9-a1923ebc7fe1';
 
 let x;

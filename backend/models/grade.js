@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.STRING
   }, {});
   Grade.associate = function(models) {
-    Grade.hasMany(models.User, { as: 'users', foreignKey: 'gradeId'});
+    Grade.hasMany(models.User, { foreignKey: 'gradeId'});
   };
   return Grade;
 };

@@ -1,2 +1,8 @@
-# Read me
-[![Build Status](https://travis-ci.com/TheRealBarenziah/blog-react-mongo.svg?branch=master)](https://travis-ci.com/TheRealBarenziah/blog-react-mongo)
+# Todo:
+## Delete this, explore:
+## Backend: Koa + Sequelize Postgre (`pg` and actual SQL will be for another one...) @TypeScript
+## Backoffice: react-admin @TypeScript
+## Frontend: Preact @TypeScript
+
+Never forget: 
+((typeof NaN === "number") === (!![])) === true
